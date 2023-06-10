@@ -2,6 +2,17 @@
 
 {% block content %}
 
-This is the products page.
+{% for product in all_products %}
+    <div class="product">
+        <a href="/products/{{product.id}}">{{product.name}}</a>
+        <p>Description: {{product.description}}</p>
+        <p>Manufactured by: {{product.manufacturer.name}}</p>
+        <p>Stock Quantity: {{product.stock_quantity}}</p>
+        <p>Buying Cost: £{{product.buying_cost}}</p>
+        <p>Selling Price: £{{product.selling_price}}</p>
+        <p>Category: {{product.category}}</p>
+        </div>
+    </div>
+{% endfor %}
 
 {% endblock %}
