@@ -44,3 +44,12 @@ def edit_product(id):
     product = product_repository.select(id)
     manufacturers = manufacturer_repository.select_all()
     return render_template('products/edit.html', product = product, all_manufacturers = manufacturers)
+
+@products_blueprint.route("/manufacturers")
+def manufacturers():
+    manufacturers = manufacturer_repository.select_all()
+    return render_template("/manufacturers/index.html", all_manufacturers = manufacturers)
+
+@products_blueprint.route("/manufacturers/new", methods=['GET'])
+def new_manufacturer():
+    return render_template("/manufacturers/new.html")
