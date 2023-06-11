@@ -28,6 +28,11 @@ product_repository.save(product_2)
 product_3 = Product("Motion Detector", "Spiritual movement dectector", 8, 25, 50, "Ghosts", manufacturer_3)
 product_repository.save(product_3)
 
+products = [product_1, product_2, product_3]
+
+print(products[1].manufacturer.name)
+
+
 
 
 pdb.set_trace()

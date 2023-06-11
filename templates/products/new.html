@@ -2,6 +2,33 @@
 
 {% block content %}
 
-This is the add product page.
+<form action="/products" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Name" required>
+    <br>
+    <label for="description">Product description:</label>
+    <input type="text" id="description" name="description" placeholder="Product description">
+    <br>
+    <label for="manufacturer">Manufacturer:</label>
+    <select id="manufacturer" name="manufacturer_id">
+        {% for manufacturer in all_manufacturers %}
+            <option value="{{ manufacturer.id}}">{{ manufacturer.name }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <label for="stock_quantity">Stock Quantity:</label>
+    <input type="number" id="stock_quantity" name="stock_quantity" placeholder="Stock Quantity">
+    <br>
+    <label for="buying_cost">Buying Cost (£):</label>
+    <input type="number" id="buying_cost" name="buying_cost" placeholder="Buying Cost (£)">
+    <br>
+    <label for="selling_price">Selling Price (£):</label>
+    <input type="number" id="selling_price" name="selling_price" placeholder="Selling Price (£)">
+    <br>
+    <label for="category">Category:</label>
+    <input type="text" id="category" name="category" placeholder="Category">
 
+    <button type="submit"> Add product to inventory</button>
+    </form>
+ 
 {% endblock %}
