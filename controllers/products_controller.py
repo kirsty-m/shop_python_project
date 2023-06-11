@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint 
 from models.product import Product
+from models.manufacturer import Manufacturer
 import repositories.product_repository as product_repository
 import repositories.manufacturer_repository as manufacturer_repository
 
@@ -53,3 +54,16 @@ def manufacturers():
 @products_blueprint.route("/manufacturers/new", methods=['GET'])
 def new_manufacturer():
     return render_template("/manufacturers/new.html")
+
+@products_blueprint.route("/manufacturers", methods=['POST'])
+def create_manufacturer():
+    name = request.form['name']
+    location = request.form['location']
+    manufacturer = Manufacturer(name, location, id)
+    manufacturer_repository.save(manufacturer)
+    return redirect('/manufacturers')
+
+@products_blueprint.route("/manufacturers/<id>", methods=['GET'])
+def show_manufacturer(id):
+    manufacturer = manufacturer_repository.select(id)
+    return render_template('manufacturers/manufacturer.html', manufacturer = manufacturer)
