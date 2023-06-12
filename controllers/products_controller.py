@@ -9,6 +9,7 @@ products_blueprint = Blueprint("products", __name__)
 
 @products_blueprint.route("/products")
 def products():
+    print("triggered")
     products = product_repository.select_all()
     return render_template("products/index.html", all_products = products)
 
@@ -34,10 +35,10 @@ def create_product():
     return redirect('/products')
 
 #SHOW
-@products_blueprint.route("/products/<id>", methods=['GET'])
-def show_product(id):
-    product = product_repository.select(id)
-    return render_template('/products/product.html', product = product)
+# @products_blueprint.route("/products/<id>", methods=['GET'])
+# def show_product(id):
+#     product = product_repository.select(id)
+#     return render_template('/products/product.html', product = product)
 
 #EDIT
 @products_blueprint.route("/products/<id>/edit", methods=['GET'])
@@ -46,15 +47,20 @@ def edit_product(id):
     manufacturers = manufacturer_repository.select_all()
     return render_template('products/edit.html', product = product, all_manufacturers = manufacturers)
 
+
 @products_blueprint.route("/manufacturers")
 def manufacturers():
     manufacturers = manufacturer_repository.select_all()
     return render_template("/manufacturers/index.html", all_manufacturers = manufacturers)
 
+
+#MANUFACTURER NEW
 @products_blueprint.route("/manufacturers/new", methods=['GET'])
 def new_manufacturer():
     return render_template("/manufacturers/new.html")
 
+
+#MANUFACTURER CREATE
 @products_blueprint.route("/manufacturers", methods=['POST'])
 def create_manufacturer():
     name = request.form['name']
@@ -63,7 +69,14 @@ def create_manufacturer():
     manufacturer_repository.save(manufacturer)
     return redirect('/manufacturers')
 
+#Manufacturer SHOW - WORKS
 @products_blueprint.route("/manufacturers/<id>", methods=['GET'])
 def show_manufacturer(id):
     manufacturer = manufacturer_repository.select(id)
-    return render_template('manufacturers/manufacturer.html', manufacturer = manufacturer)
+    return render_template('/manufacturers/manufacturer.html', manufacturer = manufacturer)
+
+#Product SHOW - DOESN'T WORK
+@products_blueprint.route("/products/<id>", methods=['GET'])
+def show_product(id):
+    product = product_repository.select(id)
+    return render_template('/products/product.html', product = product)

@@ -3,8 +3,8 @@ from models.manufacturer import Manufacturer
 from models.product import Product
 
 def save(manufacturer):
-    sql = "INSERT INTO manufacturers (name, location) VALUES (%s, %s) RETURNING *"
-    values = [manufacturer.name, manufacturer.location]
+    sql = "INSERT INTO manufacturers (name, location, contact) VALUES (%s, %s) RETURNING *"
+    values = [manufacturer.name, manufacturer.location, manufacturer]
     results = run_sql(sql, values)
     id = results[0]['id']
     manufacturer.id = id

@@ -4,7 +4,8 @@ DROP TABLE IF EXISTS manufacturers;
 CREATE TABLE manufacturers (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
-    location VARCHAR(255)
+    location VARCHAR(255),
+    contact VARCHAR(255)
 );
 
 CREATE TABLE products (
