@@ -1,0 +1,32 @@
+body {
+    margin:0px;
+    height: 100vh;
+    background-color: darkslateblue;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    background-color: black;
+    color:white;
+    grid-area:header;
+
+}
+
+header > nav > h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    padding: 30px;
+    margin:0;
+    
+
+}
+.menu {
+    background-color: black;
+    color:lime;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+    margin: 0px;
+}
