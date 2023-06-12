@@ -1,8 +1,6 @@
 body {
     margin:0px;
     height: 100vh;
-    background-color: darkslateblue;
-    color: aliceblue;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -10,17 +8,25 @@ header {
     background-color: black;
     color:white;
     grid-area:header;
-
+    display:flex;
+    height:200px;
 }
+
+header > nav {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color:white;
+
 
 header > nav > h1 {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: xx-large;
+    font-size:xx-large;
     padding: 30px;
     margin:0;
-    
-
 }
+
 .menu {
     background-color: black;
     color:lime;
@@ -29,4 +35,16 @@ header > nav > h1 {
     justify-content: space-between;
     padding: 30px;
     margin: 0px;
+    font-style: none;
+    list-style: none;
+}
+
+body > main {
+    background-color: lime;
+    color:black;
+    height:fit-content;
+}
+
+body > .main > h1 {
+    width:60%;
 }
