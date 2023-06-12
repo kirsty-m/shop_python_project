@@ -3,8 +3,8 @@ from models.manufacturer import Manufacturer
 from models.product import Product
 
 def save(manufacturer):
-    sql = "INSERT INTO manufacturers (name, location, contact) VALUES (%s, %s) RETURNING *"
-    values = [manufacturer.name, manufacturer.location, manufacturer]
+    sql = "INSERT INTO manufacturers (name, location, contact) VALUES (%s, %s, %s) RETURNING *"
+    values = [manufacturer.name, manufacturer.location, manufacturer.contact]
     results = run_sql(sql, values)
     id = results[0]['id']
     manufacturer.id = id
@@ -16,7 +16,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        manufacturer = Manufacturer(row['name'], row['location'], row['id'])
+        manufacturer = Manufacturer(row['name'], row['location'], row['contact'], row['id'])
         manufacturers.append(manufacturer)
     return manufacturers
 
@@ -28,7 +28,7 @@ def select(id):
 
     if results:
         result = results[0]
-        manufacturer = Manufacturer(result['name'], result['location'], result['id'])
+        manufacturer = Manufacturer(result['name'], result['location'], result['contact'], result['id'])
     return manufacturer
 
 def delete_all():
@@ -41,6 +41,6 @@ def delete(id):
     run_sql(sql, values)
 
 def update(manufacturer):
-    sql = "UPDATE manufacturers SET (name, location) = (%s, %s) WHERE id = %s"
-    values = [manufacturer.name, manufacturer.location, manufacturer.id]
+    sql = "UPDATE manufacturers SET (name, location, contact) = (%s, %s, %s) WHERE id = %s"
+    values = [manufacturer.name, manufacturer.location, manufacturer.contact, manufacturer.id]
     run_sql(sql, values)

@@ -65,6 +65,7 @@ def new_manufacturer():
 def create_manufacturer():
     name = request.form['name']
     location = request.form['location']
+    contact = request.form['contact']
     manufacturer = Manufacturer(name, location, id)
     manufacturer_repository.save(manufacturer)
     return redirect('/manufacturers')
