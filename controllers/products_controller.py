@@ -42,6 +42,21 @@ def edit_product(id):
     manufacturers = manufacturer_repository.select_all()
     return render_template('products/edit.html', product = product, all_manufacturers = manufacturers)
 
+#UPDATE
+@products_blueprint.route("/products/<id>", methods=['POST'])
+def update_product(id):
+    name = request.form['name']
+    description = request.form['description']
+    manufacturer_id = request.form['manufacturer_id']
+    stock_quantity = request.form['stock_quantity']
+    buying_cost = request.form['buying_cost']
+    selling_price = request.form['selling_price']
+    category = request.form['category']
+    manufacturer = manufacturer_repository.select(manufacturer_id)
+    product = Product(name, description, stock_quantity, buying_cost, selling_price, category, manufacturer, id)
+    product_repository.update(product)
+    return redirect('/products')
+
 
 @products_blueprint.route("/manufacturers")
 def manufacturers():
@@ -93,5 +108,15 @@ def delete_manufacturer(id):
 #EDIT
 @products_blueprint.route("/manufacturers/<id>/edit", methods=['GET'])
 def edit_manufacturer(id):
-    manufacturers = manufacturer_repository.select(id)
-    return render_template('/manufacturers/edit.html', manufacturers = manufacturers)
+    manufacturer = manufacturer_repository.select(id)
+    return render_template('/manufacturers/edit.html', manufacturer = manufacturer)
+
+#UPDATE MANUFACTURER
+@products_blueprint.route("/manufacturers/<id>", methods=['POST'])
+def update_manufacturer(id):
+    name = request.form['name']
+    location = request.form['location']
+    contact = request.form['contact']
+    manufacturer = Manufacturer(name, location, contact, id)
+    manufacturer_repository.update(manufacturer)
+    return redirect('/manufacturers')

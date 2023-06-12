@@ -2,7 +2,19 @@
 
 {% block content %}
 
-This is where an edit manufacturer form will be. Hopefully.
+<form action="/manufacturers/{{manufacturer.id}}" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="{{manufacturer.name}}">
+    <br>
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" value="{{manufacturer.location}}">
+    <br>
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" name="contact" value="{{manufacturer.contact}}">
+    <br>
+    <button type="submit">Update Manufacturer</button>
+</form>
+
 
 
 {% endblock %}

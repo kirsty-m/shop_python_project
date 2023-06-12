@@ -32,7 +32,4 @@ products = [product_1, product_2, product_3]
 
 print(products[1].manufacturer.name)
 
-
-
-
 pdb.set_trace()

@@ -8,3 +8,4 @@ class Product:
         self.category = category
         self.manufacturer = manufacturer
         self.id = id
+
