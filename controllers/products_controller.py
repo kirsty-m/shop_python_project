@@ -34,11 +34,6 @@ def create_product():
     product_repository.save(product)
     return redirect('/products')
 
-#SHOW
-# @products_blueprint.route("/products/<id>", methods=['GET'])
-# def show_product(id):
-#     product = product_repository.select(id)
-#     return render_template('/products/product.html', product = product)
 
 #EDIT
 @products_blueprint.route("/products/<id>/edit", methods=['GET'])
@@ -76,8 +71,14 @@ def show_manufacturer(id):
     manufacturer = manufacturer_repository.select(id)
     return render_template('/manufacturers/manufacturer.html', manufacturer = manufacturer)
 
-#Product SHOW - DOESN'T WORK
+#Product SHOW - WORKS
 @products_blueprint.route("/products/<id>", methods=['GET'])
 def show_product(id):
     product = product_repository.select(id)
     return render_template('/products/product.html', product = product)
+
+#DELETE PRODUCT
+@products_blueprint.route("/products/<id>/delete", methods=['POST'])
+def delete_product(id):
+    product_repository.delete(id)
+    return redirect("/products")

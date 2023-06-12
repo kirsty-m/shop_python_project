@@ -5,5 +5,14 @@
 <div id ="product-details">
     <h1>{{product.name}}</h1>
     <h2>{{product.description}}</h2>
+    <h2>Manufacturer: {{product.manufacturer.name}}</h2>
+    <h2>Stock Quantity: {{product.stock_quantity}}</h2>
+    <h2>Buying Cost: £{{product.buying_cost}}</h2>
+    <h2>Selling Price: £{{product.selling_price}}</h2>
+    <h2>Category: {{product.category}}</h2>
+    <form class="delete-form" action="/products/{{product.id}}/delete" method="POST">
+        <button type="submit">Delete from Inventory</button>
+    </form>
+
 </div>
 {% endblock %}
