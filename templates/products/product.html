@@ -13,6 +13,11 @@
     <form class="delete-form" action="/products/{{product.id}}/delete" method="POST">
         <button type="submit">Delete from Inventory</button>
     </form>
-
+    <br>
+    
+    <form action="/products/{{product.id}}/edit">
+        <input type="submit" value="Edit Product" />
+    </form>
+    
 </div>
 {% endblock %}

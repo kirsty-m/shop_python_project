@@ -4,6 +4,12 @@
 <h2>Name: {{manufacturer.name}}</h2>
 <p>Location: {{manufacturer.location}}</p>
 <p>Contact: {{manufacturer.contact}}</p>
+<form class="delete-form" action="/manufacturers/{{manufacturer.id}}/delete" method="POST">
+    <button type="submit">Delete Manufacturer</button>
+</form>
+<form action="/manufacturers/{{manufacturer.id}}/edit">
+    <input type="submit" value="Edit Manufacturer" />
+</form>
 
 
 {% endblock %}
