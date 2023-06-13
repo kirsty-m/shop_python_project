@@ -419,6 +419,123 @@ header > nav > ul > li > a:hover {
     width: 310px;
 }
 
+#details {
+    background-color: black;
+    min-height:650px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    padding:15px;
+}
+
+#details > #product-details {
+    display:flex;
+    flex-direction: column;
+    justify-content:end;
+    align-content: center;
+    width: 500px;
+    border-radius: 265px 265px 0 0;
+    min-height: 700px;
+    background-color: lime;
+    padding: 20px;
+    padding-left: 30px;
+    padding-bottom: 50px;
+    margin-bottom: 45px;
+    --mask:
+        radial-gradient(38.42px at 50% calc(100% - 54.00px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+        radial-gradient(38.42px at 50% calc(100% + 24.00px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+}
+
+#details > #product-details > h1{
+    color: black;
+    font-size: 30pt;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 15pt;
+    text-align: center;   
+}
+
+#details > #product-details > h2{
+    color: black;
+    font-size: 20pt;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 15pt;
+    text-align: center;   
+}
+#details > #product-details > #stock-check > h2{
+    color: black;
+    font-size: 20pt;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 15pt;
+    text-align: center;   
+}
+
+#details > #product-details > #stock-check > p{
+    background-color: white;
+    padding:5px;
+    color: black;
+    font-size: 20pt;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 15pt;
+    text-align: center;   
+}
+
+#details > #product-details >  #details-buttons >form > button[type=submit] {
+    width:fit-content;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    border-style: none;
+    padding:5px;
+    align-self: center;
+    width: 200px;
+    border-radius: 5px;
+}
+
+#details > #product-details > #details-buttons > form > button[type=submit]:hover {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+#details > #product-details > #details-buttons > form > input[type=submit] {
+    width:fit-content;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    border-style: none;
+    padding:5px;
+    align-self: center;
+    width: 200px;
+    border-radius: 5px;
+}
+
+#details > #product-details > #details-buttons > form > input[type=submit]:hover {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+#details > #product-details > #details-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#details > #product-details > #stock-check{
+    display:flex;
+    flex: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
 footer {
     background-color: black;
     display: flex;

@@ -1,29 +1,30 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<div id ="product-details">
-    <h1>{{product.name}}</h1>
-    <h2>{{product.description}}</h2>
-    <h2>Manufacturer: {{product.manufacturer.name}}</h2>
-    <h2>Stock Quantity: {{product.stock_quantity}}</h2>
-    {% if product.stock_quantity == 0 %}
-        <p>Out of Stock</p>
-    {% elif product.stock_quantity <= 5 %}
-        <p>Low Stock</p>
-    {% endif %}
-
-    <h2>Buying Cost: £{{product.buying_cost}}</h2>
-    <h2>Selling Price: £{{product.selling_price}}</h2>
-    <h2>Category: {{product.category}}</h2>
-    <form class="delete-form" action="/products/{{product.id}}/delete" method="POST">
-        <button type="submit">Delete from Inventory</button>
-    </form>
-    <br>
-    
-    <form action="/products/{{product.id}}/edit">
-        <input type="submit" value="Edit Product" />
-    </form>
-    
+<div id="details">
+    <div id ="product-details">
+        <h1>{{product.name}}</h1>
+        <h2>{{product.description}}</h2>
+        <h2>Manufacturer: {{product.manufacturer.name}}</h2>
+        <div id="stock-check">
+            <h2>Stock Quantity: {{product.stock_quantity}}</h2>
+        {% if product.stock_quantity == 0 %}
+            <p style="color:red;">Out of Stock</p>
+        {% elif product.stock_quantity <= 5 %}
+            <p>Low Stock</p>
+        {% endif %}
+        </div>
+        <h2>Buying Cost: £{{product.buying_cost}}</h2>
+        <h2>Selling Price: £{{product.selling_price}}</h2>
+        <h2>Category: {{product.category}}</h2>
+        <div id="details-buttons">
+            <form class="delete-form" action="/products/{{product.id}}/delete" method="POST">
+                <button type="submit">Delete from Inventory</button>
+            </form>
+            <form action="/products/{{product.id}}/edit">
+                <input type="submit" value="Edit Product" />
+            </form>
+        </div>
+    </div>    
 </div>
 {% endblock %}
