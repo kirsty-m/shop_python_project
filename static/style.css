@@ -272,6 +272,72 @@ header > nav > ul > li > a:hover {
     border-radius: 5px;
 }
 
+#newmanufacturermain {
+    background-color: black;
+    min-height:650px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    padding:15px;
+}
+
+#newmanufacturermain > form {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content:end;
+    align-content: center;
+    width: 425px;
+    border-radius: 235px 235px 0 0;
+    min-height: 400px;
+    background-color: white;
+    padding: 20px;
+    padding-left: 30px;
+    padding-bottom: 70px;
+    padding-top:20px;
+    margin-bottom: 45px;
+    --mask:
+        radial-gradient(38.42px at 50% calc(100% - 54.00px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+        radial-gradient(38.42px at 50% calc(100% + 24.00px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+}
+
+#newmanufacturermain > form > h1 {
+    color: black;
+    font-size: 20pt;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 21pt;
+    text-align: center;   
+}
+#newmanufacturermain > form > input[type=text]{
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    width: 300px;
+}
+
+
+#newmanufacturermain > form > button[type=submit] {
+    width:fit-content;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    border-style: none;
+    padding:5px;
+    align-self: center;
+    width: 200px;
+    border-radius: 5px;
+}
+
+#newmanufacturermain > form > button[type=submit]:hover {
+    background-color: lime;
+    color: black;
+    border-radius: 5px;
+}
+
 footer {
     background-color: black;
     display: flex;
