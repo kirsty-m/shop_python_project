@@ -105,7 +105,7 @@ header > nav > ul > li > a:hover {
     justify-content:end;
     align-content: center;
     width: 425px;
-    border-radius: 225px 225px 0 0;
+    border-radius: 235px 235px 0 0;
     min-height: 550px;
     background-color: lime;
     padding: 20px;
@@ -117,8 +117,7 @@ header > nav > ul > li > a:hover {
         radial-gradient(38.42px at 50% calc(100% + 24.00px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
     -webkit-mask: var(--mask);
             mask: var(--mask);
-      }
-  
+}
 
 #product > a {
     color: black;
@@ -150,13 +149,13 @@ header > nav > ul > li > a:hover {
     padding:15px;
 }
 
-#manufacturer {
+#manufacturerbox {
     display:flex;
     flex-direction: column;
     justify-content:end;
     align-content: center;
     width: 300px;
-    border-radius: 150px 150px 0 0;
+    border-radius: 175px 175px 0 0;
     min-height: 300px;
     max-height: 400px;
     background-color: lime;
@@ -169,9 +168,9 @@ header > nav > ul > li > a:hover {
         radial-gradient(38.42px at 50% calc(100% + 24.00px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
     -webkit-mask: var(--mask);
             mask: var(--mask);
-
 }
-#manufacturer > a {
+
+#manufacturerbox > a {
     color: black;
     font-size: 20pt;
     font-weight: 700;
@@ -181,15 +180,96 @@ header > nav > ul > li > a:hover {
 
 }
 
-#manufacturer > a:hover {
+#manufacturerbox > a:hover {
     color: white;
 }
 
-#manufacturer > p {
+#manufacturerbox > p {
     font-size: 18pt;
     font-weight: 400;
     line-height: 10px;
+}
 
+#newproductmain {
+    background-color: black;
+    min-height:650px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    padding:15px;
+}
+
+#newproductmain > form {
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content:end;
+    align-content: center;
+    width: 425px;
+    border-radius: 235px 235px 0 0;
+    min-height: 650px;
+    background-color: white;
+    padding: 20px;
+    padding-left: 30px;
+    padding-bottom: 70px;
+    padding-top:20px;
+    margin-bottom: 45px;
+    --mask:
+        radial-gradient(38.42px at 50% calc(100% - 54.00px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+        radial-gradient(38.42px at 50% calc(100% + 24.00px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+}
+
+#newproductmain > form > h1 {
+    color: black;
+    font-size: 20pt;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 21pt;
+    text-align: center;   
+}
+#newproductmain > form > input[type=text]{
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    width: 300px;
+}
+
+#newproductmain > form > input[type=number]{
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    width: 300px;
+}
+
+#newproductmain > form > select {
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    width: 300px;
+}
+
+#newproductmain > form > #button > button[type=submit] {
+    width:fit-content;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    border-style: none;
+    padding:5px;
+    align-self: center;
+    width: 150px;
+    border-radius: 5px;
+}
+
+#newproductmain > form > #button > button[type=submit]:hover {
+    background-color: lime;
+    color: black;
+    width: 150px;
+    border-radius: 5px;
 }
 
 footer {

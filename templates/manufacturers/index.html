@@ -3,7 +3,7 @@
 {% block content %}
     <div id="manufacturer-main">
         {% for manufacturer in all_manufacturers %}
-            <div id="manufacturer">
+            <div id="manufacturerbox">
                 <a href="/manufacturers/{{manufacturer.id}}">{{manufacturer.name}}</a>
                 <p>Location: {{manufacturer.location}}</p>
                 <p>Contact: {{manufacturer.contact}}</p>
