@@ -1,15 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-{% for manufacturer in all_manufacturers %}
-    <div class="manufacturer">
-        <a href="/manufacturers/{{manufacturer.id}}">{{manufacturer.name}}</a>
-        <p>Location: {{manufacturer.location}}</p>
-        <p>Contact: {{manufacturer.contact}}</p>
-
-
-    </div>
-
-{% endfor %}
+    <div id="manufacturer-main">
+        {% for manufacturer in all_manufacturers %}
+            <div id="manufacturer">
+                <a href="/manufacturers/{{manufacturer.id}}">{{manufacturer.name}}</a>
+                <p>Location: {{manufacturer.location}}</p>
+                <p>Contact: {{manufacturer.contact}}</p>
+            </div>
+        {% endfor %} 
+    </div>    
 {% endblock %}
