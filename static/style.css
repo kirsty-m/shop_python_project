@@ -1,23 +1,9 @@
-body {
-    margin:0px;
-    height: 100vh;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-header {
-    height: 200px;
-    padding: 25px;
-    background-color: black;
-    display: flex;
-    grid-area:header;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
-    color:white
-}
-
-header > ul {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
+#grid-container {
+    display: grid;
+    grid-template-areas:'header header'
+                        'main form'
+                        'footer footer';
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 70% 10%;
+    height:auto;
 }

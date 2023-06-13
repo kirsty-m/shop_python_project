@@ -12,23 +12,25 @@
 
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>PARANORMAL PANTRY</h1>
-            <i class="fa-solid fa-ghost" style="color: #ffffff; width:100px; height:100px;" aria-hidden="true"></i>
-            <ul class="menu" style="color:white;">
-                <li><a href="/">Home</a></li>
-                <li><a href="/products">Products</a></li>
-                <li><a href="/products/new">Add Product</a></li>
-                <li><a href="/manufacturers">Manufacturers</a></li>
-                <li><a href="/manufacturers/new">Add Manufacturer</a></li>
+    <div id="grid-container">
+        <header>
+            <nav>
+                <h1>PARANORMAL PANTRY</h1>
+                <i class="fa-solid fa-ghost" style="color: #ffffff; width:100px; height:100px;" aria-hidden="true"></i>
+                <ul class="menu" style="color:white;">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/products/new">Add Product</a></li>
+                    <li><a href="/manufacturers">Manufacturers</a></li>
+                    <li><a href="/manufacturers/new">Add Manufacturer</a></li>
+                </ul>
+            </nav>
+        </header>
 
-            </ul>
-        </nav>
-    </header>
-    <div class="container">
         {% block content %}
+
         {% endblock %}
+        
     </div>
 </body>
 </html>
