@@ -120,3 +120,8 @@ def update_manufacturer(id):
     manufacturer = Manufacturer(name, location, contact, id)
     manufacturer_repository.update(manufacturer)
     return redirect('/manufacturers')
+
+#filter by category
+@products_blueprint.route("/products/category", methods=['POST'])
+def filter_by_category(category):
+    product = product_repository.select(category)
