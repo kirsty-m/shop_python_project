@@ -1,34 +1,34 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<form action="/products/{{product.id}}" method="post">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" value="{{product.name}}" required>
-    <br>
-    <label for="description">Product description:</label>
-    <input type="text" id="description" name="description" value="{{product.description}}">
-    <br>
-    <label for="manufacturer">Manufacturer:</label>
-    <select id="manufacturer" name="manufacturer_id">
-        {% for manufacturer in all_manufacturers %}
-            <option value="{{ manufacturer.id}}">{{ manufacturer.name }}</option>
-        {% endfor %}
-    </select>
-    <br>
-    <label for="stock_quantity">Stock Quantity:</label>
-    <input type="number" id="stock_quantity" name="stock_quantity" value="{{product.stock_quantity}}">
-    <br>
-    <label for="buying_cost">Buying Cost (£):</label>
-    <input type="number" id="buying_cost" name="buying_cost" value="{{product.buying_cost}}" (£)>
-    <br>
-    <label for="selling_price">Selling Price (£):</label>
-    <input type="number" id="selling_price" name="selling_price" value="{{product.selling_price}}"(£)>
-    <br>
-    <label for="category">Category:</label>
-    <input type="text" id="category" name="category" value="{{product.category}}">
-
-    <button type="submit">Update Product</button>
-</form>
- 
+<div id="edit">
+    <form action="/products/{{product.id}}" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="{{product.name}}" required>
+        <br>
+        <label for="description">Product description:</label>
+        <input type="text" id="description" name="description" value="{{product.description}}">
+        <br>
+        <label for="manufacturer">Manufacturer:</label>
+        <select id="manufacturer" name="manufacturer_id">
+            {% for manufacturer in all_manufacturers %}
+                <option value="{{ manufacturer.id}}">{{ manufacturer.name }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <label for="stock_quantity">Stock Quantity:</label>
+        <input type="number" id="stock_quantity" name="stock_quantity" value="{{product.stock_quantity}}">
+        <br>
+        <label for="buying_cost">Buying Cost (£):</label>
+        <input type="number" id="buying_cost" name="buying_cost" value="{{product.buying_cost}}" (£)>
+        <br>
+        <label for="selling_price">Selling Price (£):</label>
+        <input type="number" id="selling_price" name="selling_price" value="{{product.selling_price}}"(£)>
+        <br>
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" value="{{product.category}}">
+        <br>
+        <button type="submit">Update Product</button>
+    </form>
+</div>
 {% endblock %}
