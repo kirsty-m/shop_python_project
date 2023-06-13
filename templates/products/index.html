@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<div id="product-main">
 {% for product in all_products %}
     <div class="product">
         <a href="/products/{{product.id}}">{{product.name}}</a>
@@ -15,10 +15,8 @@
         {% endif %}
         <p>Buying Cost: £{{product.buying_cost}}</p>
         <p>Selling Price: £{{product.selling_price}}</p>
-        <p>Category: {{product.category}}</p>
-        
-        
+        <p>Category: {{product.category}}</p>                
     </div>
 {% endfor %}
-
+</div>
 {% endblock %}

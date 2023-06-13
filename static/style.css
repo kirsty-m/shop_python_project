@@ -65,7 +65,7 @@ header > nav > ul > li > a:hover {
 
 
 #welcome {
-    height: 700px;
+    height: 650px;
     background-color: lime;
     display: flex;
     align-content: center;
@@ -79,8 +79,8 @@ header > nav > ul > li > a:hover {
     align-content: center;
     justify-content: center;
     margin: auto;
+    margin-top: 130px
 }
-
 
 #welcome > #home-text > h1 {   
     font-weight: 900;
@@ -90,6 +90,8 @@ header > nav > ul > li > a:hover {
     text-align: center;
     letter-spacing: 5pt;
 }
+
+{}
 
 footer {
     background-color: black;
