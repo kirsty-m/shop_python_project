@@ -1,6 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <div id="filter">
+        <div id="dropdown">
+            <label for="category">Filter by Category:</label>
+            <select name="category" method="GET" actions="/products/category">
+                {% for product in products %}
+                <option value="{{product.category}}" SELECTED>"{{product.category}}"</option>
+                {% endfor%}
+            </select>
+        </div>
+    </div>
+
+
     <div id="product-main">
         {% for product in all_products %}
             <div id="product">

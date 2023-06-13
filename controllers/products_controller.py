@@ -126,4 +126,4 @@ def update_manufacturer(id):
 @products_blueprint.route("/products/category", methods=['POST'])
 def filter_products_by_category(category):
     products = product_repository.select_by_category()
-    return render_template("/products/index.html", all_products = products)
+    return render_template("/products/index.html", products = products)
