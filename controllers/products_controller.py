@@ -9,7 +9,7 @@ products_blueprint = Blueprint("products", __name__)
 
 @products_blueprint.route("/products")
 def products():
-    print("triggered")
+    # print("triggered")
     products = product_repository.select_all()
     return render_template("products/index.html", all_products = products)
 
@@ -122,3 +122,8 @@ def update_manufacturer(id):
     return redirect('/manufacturers')
 
 
+#FILTER PRODUCTS BY CATEGORY
+@products_blueprint.route("/products/category", methods=['POST'])
+def filter_products_by_category(category):
+    products = product_repository.select_by_category()
+    return render_template("/products/index.html", all_products = products)
