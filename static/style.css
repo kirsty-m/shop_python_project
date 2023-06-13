@@ -485,7 +485,7 @@ header > nav > ul > li > a:hover {
     text-align: center;   
 }
 
-#details > #product-details >  #details-buttons >form > button[type=submit] {
+#details-buttons >form > button[type=submit] {
     width:fit-content;
     background-color: black;
     color: white;
@@ -497,12 +497,12 @@ header > nav > ul > li > a:hover {
     border-radius: 5px;
 }
 
-#details > #product-details > #details-buttons > form > button[type=submit]:hover {
+#details-buttons > form > button[type=submit]:hover {
     background-color: white;
     color: black;
     border-radius: 5px;
 }
-#details > #product-details > #details-buttons > form > input[type=submit] {
+#details-buttons > form > input[type=submit] {
     width:fit-content;
     background-color: black;
     color: white;
@@ -514,13 +514,13 @@ header > nav > ul > li > a:hover {
     border-radius: 5px;
 }
 
-#details > #product-details > #details-buttons > form > input[type=submit]:hover {
+#details-buttons > form > input[type=submit]:hover {
     background-color: white;
     color: black;
     border-radius: 5px;
 }
 
-#details > #product-details > #details-buttons{
+#details-buttons{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -534,6 +534,44 @@ header > nav > ul > li > a:hover {
     justify-content: center;
     gap: 20px;
     align-items: center;
+}
+
+#details > #manufacturer-details {
+    display:flex;
+    flex-direction: column;
+    justify-content:end;
+    align-content: center;
+    width: 500px;
+    border-radius: 265px 265px 0 0;
+    min-height: 400px;
+    background-color: lime;
+    padding: 20px;
+    padding-left: 30px;
+    padding-bottom: 50px;
+    margin-bottom: 45px;
+    --mask:
+        radial-gradient(38.42px at 50% calc(100% - 54.00px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+        radial-gradient(38.42px at 50% calc(100% + 24.00px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+}
+
+#details > #manufacturer-details > h1{
+    color: black;
+    font-size: 30pt;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 30pt;
+    text-align: center;   
+}
+
+#details > #manufacturer-details > h2{
+    color: black;
+    font-size: 20pt;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 15pt;
+    text-align: center;   
 }
 
 footer {

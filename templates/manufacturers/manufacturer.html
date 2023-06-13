@@ -1,15 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>Name: {{manufacturer.name}}</h2>
-<p>Location: {{manufacturer.location}}</p>
-<p>Contact: {{manufacturer.contact}}</p>
-<form class="delete-form" action="/manufacturers/{{manufacturer.id}}/delete" method="POST">
-    <button type="submit">Delete Manufacturer</button>
-</form>
-<form action="/manufacturers/{{manufacturer.id}}/edit">
-    <input type="submit" value="Edit Manufacturer">
-</form>
-
+<div id="details">
+    <div id="manufacturer-details">
+        <h1>Name: {{manufacturer.name}}</h1>
+        <h2>Location: {{manufacturer.location}}</h2>
+        <h2>Contact: {{manufacturer.contact}}</h2>
+        <div id="details-buttons">
+            <form class="delete-form" action="/manufacturers/{{manufacturer.id}}/delete" method="POST">
+                <button type="submit">Delete Manufacturer</button>
+            </form>
+            <form action="/manufacturers/{{manufacturer.id}}/edit">
+                <input type="submit" value="Edit Manufacturer">
+            </form>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
