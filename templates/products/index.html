@@ -10,9 +10,9 @@
                 <p>Manufactured by: {{product.manufacturer.name}}</p>
                 <p>Stock Quantity: {{product.stock_quantity}}
                 {% if product.stock_quantity == 0 %}
-                <b>Out of Stock</b>
+                <b style="color:red;background-color:white;padding:5px;">Out of Stock</b>
                 {% elif product.stock_quantity <= 5 %}
-                    <b>Low Stock</b>
+                    <b style="color:black;background-color:white;padding:5px;">Low Stock</b>
                 {% endif %}
                 <p>Buying Cost: £{{product.buying_cost}}</p>
                 <p>Selling Price: £{{product.selling_price}}</p>

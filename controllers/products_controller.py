@@ -121,3 +121,4 @@ def update_manufacturer(id):
     manufacturer_repository.update(manufacturer)
     return redirect('/manufacturers')
 
+

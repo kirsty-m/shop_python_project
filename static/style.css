@@ -93,6 +93,7 @@ header > nav > ul > li > a:hover {
 #product-main{
     background-color: black;
     min-height:650px;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-wrap:wrap;
     justify-content: space-around;
@@ -124,7 +125,7 @@ header > nav > ul > li > a:hover {
     font-size: 20pt;
     font-weight: 700;
     text-decoration: none;
-    line-height: 21pt;
+    line-height: 24pt;
     text-align: center;
 
 }
@@ -134,7 +135,7 @@ header > nav > ul > li > a:hover {
 }
 
 #product > p {
-    font-size: 18pt;
+    font-size: 16pt;
     font-weight: 400;
     line-height: 10px;
 
@@ -146,6 +147,7 @@ header > nav > ul > li > a:hover {
     display: flex;
     flex-wrap:wrap;
     justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
     padding:15px;
 }
 
@@ -204,6 +206,7 @@ header > nav > ul > li > a:hover {
     align-items: center;
     flex-direction: column;
     justify-content:end;
+    font-family: Arial, Helvetica, sans-serif;
     align-content: center;
     width: 425px;
     border-radius: 235px 235px 0 0;
@@ -287,6 +290,7 @@ header > nav > ul > li > a:hover {
     flex-direction: column;
     justify-content:end;
     align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
     width: 425px;
     border-radius: 235px 235px 0 0;
     min-height: 400px;
@@ -351,6 +355,7 @@ header > nav > ul > li > a:hover {
     display:flex;
     align-items: center;
     flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
     justify-content:end;
     align-content: center;
     width: 425px;
@@ -434,6 +439,7 @@ header > nav > ul > li > a:hover {
     justify-content:end;
     align-content: center;
     width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
     border-radius: 265px 265px 0 0;
     min-height: 700px;
     background-color: lime;
@@ -542,6 +548,7 @@ header > nav > ul > li > a:hover {
     justify-content:end;
     align-content: center;
     width: 500px;
+    font-family: Arial, Helvetica, sans-serif;
     border-radius: 265px 265px 0 0;
     min-height: 400px;
     background-color: lime;
