@@ -91,7 +91,32 @@ header > nav > ul > li > a:hover {
     letter-spacing: 5pt;
 }
 
-{}
+#product-main{
+    background-color: black;
+    min-height:650px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+
+#product {
+    display:flex;
+    flex-direction: column;
+    width: 25vw;
+    background-color: lime;
+    padding: 20px;
+}
+
+#product > a {
+    color: black;
+    font-size: 20pt;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#product > a:hover {
+    color: white;
+}
 
 footer {
     background-color: black;
