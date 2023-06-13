@@ -1,6 +1,6 @@
 body{
     margin:0px;
-    height: 100vh;
+    height: 100%;
 }
 
 header {
@@ -51,7 +51,9 @@ header > nav > ul > li > a {
     text-decoration: none;
 }
 
-
+header > nav > ul > li > a:active {
+    color:lime;
+}
 header > nav > ul > li > a:visited {
     color:white;
 }
@@ -60,14 +62,60 @@ header > nav > ul > li > a:hover {
     color:lime;
 }
 
+#welcome {
+    background-color: lime;
+    grid-area: main;
+}
+
+#welcome > #home-text {
+    width:40%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    height:
+
+}
+
+#welcome > #home-text > h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+    display:flexbox;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+
+
+}
+
+footer {
+    background-color: black;
+    display: flex;
+    padding: 20px;
+    grid-area: footer;
+    justify-content: center;
+
+}
+
+footer > h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:white;
+    font-size: 18pt;
+    font-weight: 100;
+    letter-spacing: 10px ;
+
+}
+
 
 #grid-container {
     display: grid;
-    grid-template-areas:'header header'
-                        'main form'
-                        'footer footer';
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 20% 70% 10%;
+    grid-template-areas:'header header header'
+                        'main main main'
+                        'footer footer footer';
+    grid-template-columns: ;
+    grid-auto-rows:max-content;
     height:auto;
 }
+
+
 
