@@ -3,11 +3,11 @@
 {% block content %}
     <div id="filter">
         <div id="dropdown">
-            <label for="category">Filter by Category:</label>
-            <select name="category" method="POST" actions="/products/category">
-                {% for product in products %}
-                <option value="{{product.category}}">{{product.category}}</option>
-                {% endfor%}
+            <label for="manufacturer-list">Filter by Manufacturer:</label>
+            <select name="manufacturer-list" id="manufacturer-list">
+            {% for manufacturer in all_manufacturers %}
+                <option value="{{manufacturer.id}}">{{manufacturer.name}}</option>
+            {% endfor %}
             </select>
         </div>
     </div>

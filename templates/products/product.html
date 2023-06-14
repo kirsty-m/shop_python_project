@@ -16,6 +16,8 @@
         </div>
         <h2>Buying Cost: £{{product.buying_cost}}</h2>
         <h2>Selling Price: £{{product.selling_price}}</h2>
+        <h2>Profit: £{{product.selling_price - product.buying_cost}}</h2>
+        <h2>Markup: {{(product.selling_price - product.buying_cost) / product.selling_price * 100}}%</h2>
         <h2>Category: {{product.category}}</h2>
         <div id="details-buttons">
             <form class="delete-form" action="/products/{{product.id}}/delete" method="POST">

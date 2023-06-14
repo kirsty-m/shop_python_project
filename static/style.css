@@ -6,10 +6,11 @@ body {
 }
 
 header{
-    height: 150px;
+    height: 100px;
     background-color: black;
     margin: 0px;
-    padding: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 
@@ -18,15 +19,20 @@ header > nav {
     flex-flow: row;
     align-items: center;
     color: white;
-    justify-content:space-evenly;
+    justify-content:space-around;
 
 }
 
-header > nav > h1 {
+header > nav > a {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 900;
     color: white;
     font-size: 40pt;
+    text-decoration: none;
+}
+
+header > nav > a:hover {
+    color:lime;
 }
 
 header > nav > ul {
@@ -64,7 +70,7 @@ header > nav > ul > li > a:hover {
 
 
 #welcome {
-    height: 650px;
+    height: 700px;
     background-color: lime;
     display: flex;
     align-content: center;
@@ -119,6 +125,7 @@ header > nav > ul > li > a:hover {
     -webkit-mask: var(--mask);
             mask: var(--mask);
 }
+/* ^^created using open source wave generator with my dimensions added ^^ */
 
 #product > a {
     color: black;
@@ -143,7 +150,7 @@ header > nav > ul > li > a:hover {
 
 #manufacturer-main {
     background-color: black;
-    min-height:650px;
+    min-height:700px;
     display: flex;
     flex-wrap:wrap;
     justify-content: space-around;
@@ -171,6 +178,7 @@ header > nav > ul > li > a:hover {
     -webkit-mask: var(--mask);
             mask: var(--mask);
 }
+/* ^^created using open source wave generator with my dimensions added ^^ */
 
 #manufacturerbox > a {
     color: black;
@@ -194,7 +202,7 @@ header > nav > ul > li > a:hover {
 
 #newproductmain {
     background-color: black;
-    min-height:650px;
+    min-height:700px;
     display: flex;
     flex-wrap:wrap;
     justify-content: space-around;
@@ -223,6 +231,7 @@ header > nav > ul > li > a:hover {
     -webkit-mask: var(--mask);
             mask: var(--mask);
 }
+/* ^^created using open source wave generator with my dimensions added ^^ */
 
 #newproductmain > form > h1 {
     color: black;
@@ -277,7 +286,7 @@ header > nav > ul > li > a:hover {
 
 #newmanufacturermain {
     background-color: black;
-    min-height:650px;
+    min-height:700px;
     display: flex;
     flex-wrap:wrap;
     justify-content: space-around;
@@ -306,6 +315,7 @@ header > nav > ul > li > a:hover {
     -webkit-mask: var(--mask);
             mask: var(--mask);
 }
+/* ^^created using open source wave generator with my dimensions added ^^ */
 
 #newmanufacturermain > form > h1 {
     color: black;
@@ -373,6 +383,7 @@ header > nav > ul > li > a:hover {
     -webkit-mask: var(--mask);
             mask: var(--mask);
 }
+/* ^^created using open source wave generator with my dimensions added ^^ */
 
 #edit > form > h1 {
     color: black;
@@ -453,6 +464,7 @@ header > nav > ul > li > a:hover {
     -webkit-mask: var(--mask);
             mask: var(--mask);
 }
+/* ^^created using open source wave generator with my dimensions added ^^ */
 
 #details > #product-details > h1{
     color: black;
@@ -562,6 +574,7 @@ header > nav > ul > li > a:hover {
     -webkit-mask: var(--mask);
             mask: var(--mask);
 }
+/* ^^created using open source wave generator with my dimensions added ^^ */
 
 #details > #manufacturer-details > h1{
     color: black;

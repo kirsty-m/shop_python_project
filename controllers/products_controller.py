@@ -123,7 +123,14 @@ def update_manufacturer(id):
 
 
 #FILTER PRODUCTS BY CATEGORY
-@products_blueprint.route("/products/category", methods=['POST'])
-def filter_products_by_category(category):
-    products = product_repository.select_by_category()
-    return render_template("/products/index.html", products = products)
+# @products_blueprint.route("/products/category", methods=['POST'])
+# def filter_products_by_category(category):
+#     products = product_repository.select_by_category()
+#     categories = product.category
+#     return render_template("/products/index.html", products = products, categories = categories)
+
+#FILTER PRODUCTS BY MANUFACTURER
+@products_blueprint.route("/products/manufacturer", methods=['POST'])
+def filter_products_by_manufacturer(manufacturer):
+    products = product_repository.select_by_manufacturer(manufacturer_id)
+    return render_template("/products/index.html", products = products, all_manufacturers = manufacturers)

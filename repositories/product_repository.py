@@ -55,3 +55,11 @@ def select_by_category(category):
     sql = "SELECT * FROM products WHERE category = %s"
     values = [category]
     results = run_sql(sql, values)
+
+
+#FILTER PRODUCTS BY MANUFACTURER
+def select_by_manufacturer(manufacturer):
+    products = []
+    sql = "SELECT * FROM products WHERE manufacturer_id = %s"
+    values = [manufacturer_id]
+    results = run_sql(sql, values)
