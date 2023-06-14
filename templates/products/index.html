@@ -4,9 +4,9 @@
     <div id="filter">
         <div id="dropdown">
             <label for="category">Filter by Category:</label>
-            <select name="category" method="GET" actions="/products/category">
+            <select name="category" method="POST" actions="/products/category">
                 {% for product in products %}
-                <option value="{{product.category}}" SELECTED>"{{product.category}}"</option>
+                <option value="{{product.category}}">{{product.category}}</option>
                 {% endfor%}
             </select>
         </div>
