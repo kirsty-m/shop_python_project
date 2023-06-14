@@ -49,7 +49,7 @@ def update(product):
     run_sql(sql, values)
 
 
-#FILTER PRODUCTS BY CATEGORY
+#FILTER PRODUCTS BY CATEGORY 
 def select_by_category(category):
     products = []
     sql = "SELECT * FROM products WHERE category = %s"

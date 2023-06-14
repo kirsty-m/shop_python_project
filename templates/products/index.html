@@ -1,17 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div id="filter">
+
+<!-- Couldn't get this working -->
+    <!-- <div id="filter">
         <div id="dropdown">
-            <label for="manufacturer-list">Filter by Manufacturer:</label>
-            <select name="manufacturer-list" id="manufacturer-list">
-            {% for manufacturer in all_manufacturers %}
-                <option value="{{manufacturer.id}}">{{manufacturer.name}}</option>
-            {% endfor %}
-            </select>
+            <form method="POST" action="/products/manufacturer">
+                <label for="manufacturer">Filter by Manufacturer:</label>
+                {{all_manufacturers|length}}
+                <select name="manufacturer" id="manufacturer" >
+                    
+                    {% for manufacturer in all_manufacturers %}
+                    <option value="{{manufacturer.id}}">{{manufacturer.name}}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Filter">
+            </form>
         </div>
     </div>
-
+-->
 
     <div id="product-main">
         {% for product in all_products %}

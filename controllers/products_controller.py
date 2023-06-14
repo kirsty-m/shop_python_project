@@ -121,6 +121,7 @@ def update_manufacturer(id):
     manufacturer_repository.update(manufacturer)
     return redirect('/manufacturers')
 
+#Couldn't get these functions working
 
 #FILTER PRODUCTS BY CATEGORY
 # @products_blueprint.route("/products/category", methods=['POST'])
@@ -130,7 +131,9 @@ def update_manufacturer(id):
 #     return render_template("/products/index.html", products = products, categories = categories)
 
 #FILTER PRODUCTS BY MANUFACTURER
-@products_blueprint.route("/products/manufacturer", methods=['POST'])
-def filter_products_by_manufacturer(manufacturer):
-    products = product_repository.select_by_manufacturer(manufacturer_id)
-    return render_template("/products/index.html", products = products, all_manufacturers = manufacturers)
+# @products_blueprint.route("/products/manufacturer", methods=['POST'])
+# def filter_products_by_manufacturer(manufacturer):
+#     products = product_repository.select_by_manufacturer(manufacturer_id)
+#     manufacturers = Manufacturer(name, location, contact, id)
+#     manufacturer = manufacturer_repository.select(id)
+#     return render_template("/products/index.html", products = products, all_manufacturers = manufacturers, manufacturer = manufacturer)
